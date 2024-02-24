@@ -24,6 +24,7 @@ class MyThemes {
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.deepPurple),
       )
+      
     );
 
   static final darkTheme = ThemeData(
