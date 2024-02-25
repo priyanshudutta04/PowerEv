@@ -14,6 +14,20 @@ class _ChooseChargerState extends State<ChooseCharger> {
     
   int _currentIndex = 1; // Index of the container in the center
 
+  List<String> images=[
+    "assets/images/Type1-bg.png",
+    "assets/images/Type-2-bg.png",
+    "assets/images/NACS-bg.png",                               
+    "assets/images/CCS-2-bg.png"
+  ];
+
+  List<String> names=[
+    "Type-1",
+    "Type-2",
+    "NACS",
+    "CCS-2",
+  ];
+
   @override
   Widget build(BuildContext context) {
 
@@ -28,7 +42,7 @@ class _ChooseChargerState extends State<ChooseCharger> {
           children: [
           
              Padding(
-                padding: const EdgeInsets.only(left: 20,top: 50,bottom: 20),
+                padding: const EdgeInsets.only(left: 20,top: 70,bottom: 20),
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.transparent
@@ -47,7 +61,7 @@ class _ChooseChargerState extends State<ChooseCharger> {
                     color: Colors.transparent
                   ),
                   child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                    "Please Select Your Electric Vehicle Charger",
                     style: TextStyle(
                       fontSize: 14, 
                       color: Color.fromARGB(255, 214, 204, 204),
@@ -64,7 +78,7 @@ class _ChooseChargerState extends State<ChooseCharger> {
               height: 300,
               child: Center(
                 child: PageView.builder(
-                  itemCount: 3,
+                  itemCount: 4,
                   controller: PageController(
                     initialPage: _currentIndex,
                     viewportFraction: 0.6,
@@ -81,14 +95,21 @@ class _ChooseChargerState extends State<ChooseCharger> {
                         color: _currentIndex == index ? Color.fromRGBO(189, 227, 232, 1):context.theme.splashColor,
                         borderRadius: BorderRadius.circular(20.0),
                       ),
-                      child: Center(
-                        child: Text(
-                          'Container $index',
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            images[index],
+
+                          ),
+                          Text(
+                          names[index],
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 24.0,
                           ),
                         ),
+                        ],
+                        
                       ),
                     );
                   },
@@ -101,17 +122,38 @@ class _ChooseChargerState extends State<ChooseCharger> {
                       Navigator.pushNamed(context, '/getStarted')
                   },
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 20, right: 20, top: 60,bottom: 10),
+                  padding: const EdgeInsets.only(left: 15, right: 15, top: 60,bottom: 10),
                   child: Align(
                     alignment: Alignment.bottomCenter,
                     child: Container(
-                      height: 75,
+                      height: 65,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: context.cardColor
+                        borderRadius: BorderRadius.circular(27),
+                        color: context.theme.focusColor
                       ),
-                      child: Center(child: Text("Confirm",style: TextStyle(fontFamily: 'FontMain',fontSize: 22,color: context.theme.focusColor),)),
+                      child: Center(child: Text("View More Info",style: TextStyle(fontFamily: 'FontMain',fontSize: 18,color: context.theme.splashColor),)),
+                    ),
+                  ),
+                ),
+              ),
+
+            GestureDetector(
+                onTap: () => {
+                      Navigator.pushNamed(context, '/getStarted')
+                  },
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 15, right: 15, top: 0,bottom: 10),
+                  child: Align(
+                    alignment: Alignment.bottomCenter,
+                    child: Container(
+                      height: 65,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(27),
+                        color: context.theme.splashColor
+                      ),
+                      child: Center(child: Text("Confirm",style: TextStyle(fontFamily: 'FontMain',fontSize: 18,color: context.theme.focusColor),)),
                     ),
                   ),
                 ),
