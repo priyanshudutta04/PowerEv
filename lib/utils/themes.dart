@@ -20,6 +20,7 @@ class MyThemes {
       cardColor: Color.fromRGBO(116, 255, 172, 1),
       focusColor: Colors.white,
       splashColor: Color.fromARGB(255, 84, 84, 84),
+      
       appBarTheme: AppBarTheme(
         color: const Color.fromARGB(255, 205, 78, 228),
         elevation: 0.0,

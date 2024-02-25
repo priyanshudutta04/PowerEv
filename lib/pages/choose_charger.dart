@@ -140,7 +140,7 @@ class _ChooseChargerState extends State<ChooseCharger> {
 
             GestureDetector(
                 onTap: () => {
-                      Navigator.pushNamed(context, '/getStarted')
+                      Navigator.pushNamed(context, '/home')
                   },
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15, right: 15, top: 0,bottom: 10),
