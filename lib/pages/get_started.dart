@@ -27,7 +27,9 @@ class GetStarted extends StatelessWidget {
           ],
         ),
         child: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, "/charger");
+          },
           child: Icon(CupertinoIcons.arrow_right,color: context.theme.focusColor,),
           backgroundColor: context.cardColor,
           shape: CircleBorder(),

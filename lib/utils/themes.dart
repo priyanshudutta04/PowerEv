@@ -19,12 +19,18 @@ class MyThemes {
       canvasColor: Color.fromRGBO(14, 24, 29, 1),
       cardColor: Color.fromRGBO(116, 255, 172, 1),
       focusColor: Colors.white,
+      splashColor: Color.fromARGB(255, 84, 84, 84),
       appBarTheme: AppBarTheme(
         color: const Color.fromARGB(255, 205, 78, 228),
         elevation: 0.0,
         iconTheme: IconThemeData(color: Colors.deepPurple),
-      )
-      
+      ),
+      // pageTransitionsTheme: PageTransitionsTheme(
+      //     builders: {
+      //       TargetPlatform.android: ZoomPageTransitionsBuilder(),
+      //       TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+      //     },
+      //   ),
     );
 
   static final darkTheme = ThemeData(

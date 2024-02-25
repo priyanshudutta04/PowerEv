@@ -2,7 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:power_ev/pages/choose_charger.dart';
 import 'package:power_ev/pages/get_started.dart';
+import 'package:power_ev/utils/routes.dart';
 import 'package:power_ev/utils/themes.dart';
 import 'package:provider/provider.dart';
 
@@ -56,7 +58,8 @@ class _MyAppState extends State<MyApp> {
       
       routes: {                                       //creating routes for different pages in app
         "/": (context) => GetStarted(),                //main root 
-        // Myroutes.getStartedRoute: (context) => GetStarted(),
+        Myroutes.chargerRoute: (context) => ChooseCharger(),
+        Myroutes.getStartedRoute: (context) => GetStarted(),
       },
     );   
   }
