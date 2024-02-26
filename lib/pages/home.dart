@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:power_ev/widgets/charger_card.dart';
+import 'package:power_ev/widgets/pulsating_gradient.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 
@@ -16,8 +18,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-String city = 'Loading...';
-String state = '..';
+  String city = 'Loading...';
+  String state = '..';
+
 
   @override
   void initState() {
@@ -132,7 +135,14 @@ String state = '..';
                                     borderRadius: BorderRadius.circular(25),
                                     // border: Border.all(width: 2,color: Colors.white30),
                                   ),
-                                  child: ChargerCard(name: "EVCS Charging Station",),
+                                  child: city=="Loading..."? PulsatingGradientContainer():
+
+                                  ChargerCard(
+                                    name: "EVCS Charging Station",
+                                    image: "assets/images/station-1.jpg",
+                                    address: "Action Area I, Newtown, Kolkata",
+                                    ports: "10 ports available",
+                                  ),
                                 ),           
                             ),
                           ),
@@ -153,7 +163,13 @@ String state = '..';
                                     borderRadius: BorderRadius.circular(25),
                                     // border: Border.all(width: 2,color: Colors.white30),
                                   ),
-                                  child: ChargerCard(name: "NKDA Charging Station",),
+                                  child: city=="Loading..."? PulsatingGradientContainer():
+                                  ChargerCard(
+                                    name: "NKDA Charging Station",
+                                    image: "assets/images/station-1.jpg",
+                                    address: "AE Block, New Town, Kolkata",
+                                    ports: "4 ports available",
+                                  ),
                                 ),           
                             ),
                           ),
@@ -174,7 +190,13 @@ String state = '..';
                                     borderRadius: BorderRadius.circular(25),
                                     // border: Border.all(width: 2,color: Colors.white30),
                                   ),
-                                  child: ChargerCard(name: "EESL Charging Station",),
+                                  child: city=="Loading..."? PulsatingGradientContainer(): 
+                                  ChargerCard(
+                                    name: "Tellus power green",
+                                    image: "assets/images/station-1.jpg",
+                                    address: "Sector II, Bidhannagar, Kolkata",
+                                    ports: "6 ports available",
+                                  ),
                                 ),           
                             ),
                           ),
@@ -195,7 +217,13 @@ String state = '..';
                                     borderRadius: BorderRadius.circular(25),
                                     // border: Border.all(width: 2,color: Colors.white30),
                                   ),
-                                  child: ChargerCard(name: "Energize EV Charging",),
+                                  child: city=="Loading..."? PulsatingGradientContainer():
+                                  ChargerCard(
+                                    name: "EV City India",
+                                    image: "assets/images/station-1.jpg",
+                                    address: "AB Block, Sector 1, Bidhannagar, Kolkaata",
+                                    ports: "5 ports available",
+                                  ),
                                 ),           
                             ),
                           ),
@@ -215,3 +243,5 @@ String state = '..';
     );
   }
 }
+
+

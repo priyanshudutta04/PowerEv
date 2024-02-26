@@ -4,7 +4,10 @@ import 'package:velocity_x/velocity_x.dart';
 
 class ChargerCard extends StatelessWidget {
   final String name;
-  ChargerCard({super.key, required this.name});
+  final String image;
+  final String address;
+  final String ports;
+  ChargerCard({super.key, required this.name, required this.image, required this.address, required this.ports});
 
 
   @override
@@ -22,7 +25,7 @@ class ChargerCard extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(25),
                   child: Container(
-                    child: Image.asset("assets/images/station-1.jpg", fit: BoxFit.cover),
+                    child: Image.asset(image, fit: BoxFit.cover),
                     height: 100,
                     width: 100,
                   ),
@@ -35,11 +38,19 @@ class ChargerCard extends StatelessWidget {
                       Text(name,style: TextStyle(fontFamily: 'FontMain',color: context.theme.focusColor,fontSize: 18),),
                       SizedBox(height: 5), 
                       Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Icon(CupertinoIcons.location_circle,color: context.theme.focusColor,),
+                          Padding(
+                            padding: const EdgeInsets.only(top:5.0),
+                            child: Container(
+                                height: 15,
+                                child: Image.asset("assets/icons/location.png"),
+                            ),
+                          ),
+                          SizedBox(width: 5,),
                           Expanded(
                             child: Text(
-                              "Action Area I, Newtown, Kolkata",
+                              address,
                               softWrap: true,
                               style: TextStyle(fontFamily: 'FontMain',color: context.theme.focusColor),
                             ),
@@ -47,7 +58,7 @@ class ChargerCard extends StatelessWidget {
                         ],
                       ),
                       SizedBox(height: 5), 
-                      Text("212 reviews",style: TextStyle(fontFamily: 'FontMain',color: context.theme.focusColor,fontSize: 12),),  
+                      Text(ports,style: TextStyle(fontFamily: 'FontMain',color: context.theme.cardColor,fontSize: 12),),  
                     ],
                   ),
                 ),
