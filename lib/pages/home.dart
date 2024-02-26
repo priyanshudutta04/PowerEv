@@ -121,7 +121,10 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           GestureDetector(
                             onTap:  () => {
-                                Navigator.pushNamed(context, '/stationDetails')
+                                Navigator.pushNamed(
+                                  context, '/stationDetails',
+                                  arguments: 0,
+                                )
                             },
                             child: Padding(
                               padding: const EdgeInsets.only(left: 20,right: 20,top:10),
@@ -152,84 +155,108 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
 
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20,right: 20,top:10),
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(25),
-                                child: Container(
-                                  height: 150,
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.white60,Colors.white10]
+                          GestureDetector(
+                            onTap:  () => {
+                                Navigator.pushNamed(
+                                  context, '/stationDetails',
+                                  arguments: 1,
+                                )
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 20,right: 20,top:10),
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(25),
+                                  child: Container(
+                                    height: 150,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topLeft,
+                                        end: Alignment.bottomRight,
+                                        colors: [Colors.white60,Colors.white10]
+                                      ),
+                                      borderRadius: BorderRadius.circular(25),
+                                      // border: Border.all(width: 2,color: Colors.white30),
                                     ),
-                                    borderRadius: BorderRadius.circular(25),
-                                    // border: Border.all(width: 2,color: Colors.white30),
-                                  ),
-                                  child: city=="Loading..."? PulsatingGradientContainer():
-                                  ChargerCard(
-                                    name: "NKDA Charging Station",
-                                    image: "assets/images/station-2.jpg",
-                                    address: "AE Block, New Town, Kolkata",
-                                    ports: "4 ports available",
-                                  ),
-                                ),           
+                                    child: city=="Loading..."? PulsatingGradientContainer():
+                                    ChargerCard(
+                                      name: "NKDA Charging Station",
+                                      image: "assets/images/station-2.jpg",
+                                      address: "AE Block, New Town, Kolkata",
+                                      ports: "4 ports available",
+                                    ),
+                                  ),           
+                              ),
                             ),
                           ),
 
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20,right: 20,top:10),
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(25),
-                                child: Container(
-                                  height: 150,
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.white60,Colors.white10]
+                          GestureDetector(
+                            onTap:  () => {
+                                Navigator.pushNamed(
+                                  context, '/stationDetails',
+                                  arguments: 2,
+                                )
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 20,right: 20,top:10),
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(25),
+                                  child: Container(
+                                    height: 150,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topLeft,
+                                        end: Alignment.bottomRight,
+                                        colors: [Colors.white60,Colors.white10]
+                                      ),
+                                      borderRadius: BorderRadius.circular(25),
+                                      // border: Border.all(width: 2,color: Colors.white30),
                                     ),
-                                    borderRadius: BorderRadius.circular(25),
-                                    // border: Border.all(width: 2,color: Colors.white30),
-                                  ),
-                                  child: city=="Loading..."? PulsatingGradientContainer(): 
-                                  ChargerCard(
-                                    name: "Tellus power green",
-                                    image: "assets/images/station-3.jpg",
-                                    address: "Sector II, Bidhannagar, Kolkata",
-                                    ports: "6 ports available",
-                                  ),
-                                ),           
+                                    child: city=="Loading..."? PulsatingGradientContainer(): 
+                                    ChargerCard(
+                                      name: "Tellus power green",
+                                      image: "assets/images/station-3.jpg",
+                                      address: "Sector II, Bidhannagar, Kolkata",
+                                      ports: "6 ports available",
+                                    ),
+                                  ),           
+                              ),
                             ),
                           ),
 
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20,right: 20,top:10),
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(25),
-                                child: Container(
-                                  height: 150,
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.white60,Colors.white10]
+                          GestureDetector(
+                            onTap:  () => {
+                                Navigator.pushNamed(
+                                  context, '/stationDetails',
+                                  arguments: 3,
+                                )
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 20,right: 20,top:10),
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(25),
+                                  child: Container(
+                                    height: 150,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topLeft,
+                                        end: Alignment.bottomRight,
+                                        colors: [Colors.white60,Colors.white10]
+                                      ),
+                                      borderRadius: BorderRadius.circular(25),
+                                      // border: Border.all(width: 2,color: Colors.white30),
                                     ),
-                                    borderRadius: BorderRadius.circular(25),
-                                    // border: Border.all(width: 2,color: Colors.white30),
-                                  ),
-                                  child: city=="Loading..."? PulsatingGradientContainer():
-                                  ChargerCard(
-                                    name: "EV City India",
-                                    image: "assets/images/station-4.jpg",
-                                    address: "AB Block, Sector 1, Bidhannagar, Kolkaata",
-                                    ports: "5 ports available",
-                                  ),
-                                ),           
+                                    child: city=="Loading..."? PulsatingGradientContainer():
+                                    ChargerCard(
+                                      name: "EV City India",
+                                      image: "assets/images/station-4.jpg",
+                                      address: "AB Block, Sector 1, Bidhannagar, Kolkaata",
+                                      ports: "5 ports available",
+                                    ),
+                                  ),           
+                              ),
                             ),
                           ),
                           

@@ -3,10 +3,47 @@ import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class StationDetails extends StatelessWidget {
-  const StationDetails({super.key});
 
-    @override
+
+  StationDetails({super.key,});
+
+
+  List<String> images=[
+    "assets/images/station-1.jpg",
+    "assets/images/station-2.jpg",
+    "assets/images/station-3.jpg",                               
+    "assets/images/station-4.jpg"
+  ];
+
+  List<String> names=[
+    "EVCS Charging Station",
+    "NKDA Charging Station",
+    "Tellus power green",
+    "EV City India",
+  ];
+
+  List<String> address=[
+    "Action Area I, Newtown, Kolkata",
+    "AE Block, New Town, Kolkata",
+    "Sector II, Bidhannagar, Kolkata",
+    "AB Block, Sector 1, Bidhannagar, Kolkaata",
+  ];
+
+  List<String> ports=[
+    "10 Ports",
+    "4 Ports",
+    "6 Ports",
+    "5 Ports",
+  ];
+
+
+
+
+
+  @override
   Widget build(BuildContext context) {
+    final int index = ModalRoute.of(context)?.settings.arguments as int;
+
     return Scaffold(
         backgroundColor: context.canvasColor,
         body: SingleChildScrollView(
@@ -18,7 +55,7 @@ class StationDetails extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(bottomLeft: Radius.circular(5),bottomRight: Radius.circular(5)),
                   image: DecorationImage(
-                    image: AssetImage('assets/images/station-1.jpg'), 
+                    image: AssetImage(images[index]), 
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -28,7 +65,7 @@ class StationDetails extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
-                  'EVCS Charging Station',
+                  names[index],
                   style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
@@ -53,7 +90,7 @@ class StationDetails extends StatelessWidget {
                     SizedBox(width: 5,),
                     Expanded(
                       child: Text(
-                        "Action Area I, Newtown, Kolkata",
+                        address[index],
                         softWrap: true,
                         style: TextStyle(fontFamily: 'FontMain',color: context.theme.focusColor,fontSize: 16),
                       ),
@@ -122,7 +159,7 @@ class StationDetails extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  "10 Ports",
+                                  ports[index],
                                   style:TextStyle(fontFamily: 'FontMain',color: context.theme.focusColor,fontSize: 18),
                                 ),
                                 Text(
@@ -183,12 +220,6 @@ class StationDetails extends StatelessWidget {
               ),
               const SizedBox(height: 10,),
 
-              // Divider(
-              //               color: context.cardColor,
-              //               thickness: 1.0,
-              //               indent: 18.0,
-              //               endIndent: 18.0,
-              //             ),
 
               GestureDetector(
                 // onTap: () => {
