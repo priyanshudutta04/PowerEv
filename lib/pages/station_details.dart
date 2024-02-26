@@ -243,9 +243,9 @@ class StationDetails extends StatelessWidget {
               ),
 
             GestureDetector(
-                // onTap: () => {
-                //       Navigator.pushNamed(context, '/home')
-                //   },
+                onTap: () => {
+                      Navigator.pushNamed(context, '/availability')
+                  },
                 child: Padding(
                   padding: const EdgeInsets.only(left: 15, right: 15, top: 0,bottom: 10),
                   child: Align(
