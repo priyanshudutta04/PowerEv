@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
+import 'package:power_ev/widgets/charger_card.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 
@@ -83,7 +85,7 @@ String state = '..';
                   padding: const EdgeInsets.only(left: 20,right:20,top: 40),
                   child: Text(
                     city,
-                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold,fontFamily: 'Anta',letterSpacing: 3,color: context.theme.focusColor),
+                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold,fontFamily: 'Anta',letterSpacing: 3,color: context.theme.focusColor),
                   ),
                 ),
                 Padding(
@@ -117,9 +119,9 @@ String state = '..';
                           Padding(
                             padding: const EdgeInsets.only(left: 20,right: 20,top:10),
                             child: ClipRRect(
-                                borderRadius: BorderRadius.circular(45),
+                                borderRadius: BorderRadius.circular(25),
                                 child: Container(
-                                  height: 200,
+                                  height: 160,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
@@ -127,19 +129,20 @@ String state = '..';
                                       end: Alignment.bottomRight,
                                       colors: [Colors.white60,Colors.white10]
                                     ),
-                                    borderRadius: BorderRadius.circular(45),
+                                    borderRadius: BorderRadius.circular(25),
                                     // border: Border.all(width: 2,color: Colors.white30),
                                   ),
-                                ),
-                              
+                                  child: ChargerCard(name: "EVCS Charging Station",),
+                                ),           
                             ),
                           ),
+
                           Padding(
-                            padding: const EdgeInsets.only(left: 20,right: 20,top:20),
+                            padding: const EdgeInsets.only(left: 20,right: 20,top:10),
                             child: ClipRRect(
-                                borderRadius: BorderRadius.circular(45),
+                                borderRadius: BorderRadius.circular(25),
                                 child: Container(
-                                  height: 200,
+                                  height: 160,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
@@ -147,19 +150,20 @@ String state = '..';
                                       end: Alignment.bottomRight,
                                       colors: [Colors.white60,Colors.white10]
                                     ),
-                                    borderRadius: BorderRadius.circular(45),
+                                    borderRadius: BorderRadius.circular(25),
                                     // border: Border.all(width: 2,color: Colors.white30),
                                   ),
-                                ),
-                              
+                                  child: ChargerCard(name: "NKDA Charging Station",),
+                                ),           
                             ),
                           ),
+
                           Padding(
-                            padding: const EdgeInsets.only(left: 20,right: 20,top:20),
+                            padding: const EdgeInsets.only(left: 20,right: 20,top:10),
                             child: ClipRRect(
-                                borderRadius: BorderRadius.circular(45),
+                                borderRadius: BorderRadius.circular(25),
                                 child: Container(
-                                  height: 200,
+                                  height: 160,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
@@ -167,19 +171,20 @@ String state = '..';
                                       end: Alignment.bottomRight,
                                       colors: [Colors.white60,Colors.white10]
                                     ),
-                                    borderRadius: BorderRadius.circular(45),
+                                    borderRadius: BorderRadius.circular(25),
                                     // border: Border.all(width: 2,color: Colors.white30),
                                   ),
-                                ),
-                              
+                                  child: ChargerCard(name: "EESL Charging Station",),
+                                ),           
                             ),
                           ),
+
                           Padding(
-                            padding: const EdgeInsets.only(left: 20,right: 20,top:20),
+                            padding: const EdgeInsets.only(left: 20,right: 20,top:10),
                             child: ClipRRect(
-                                borderRadius: BorderRadius.circular(45),
+                                borderRadius: BorderRadius.circular(25),
                                 child: Container(
-                                  height: 200,
+                                  height: 160,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
@@ -187,11 +192,11 @@ String state = '..';
                                       end: Alignment.bottomRight,
                                       colors: [Colors.white60,Colors.white10]
                                     ),
-                                    borderRadius: BorderRadius.circular(45),
+                                    borderRadius: BorderRadius.circular(25),
                                     // border: Border.all(width: 2,color: Colors.white30),
                                   ),
-                                ),
-                              
+                                  child: ChargerCard(name: "Energize EV Charging",),
+                                ),           
                             ),
                           ),
                           
