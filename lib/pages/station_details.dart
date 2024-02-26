@@ -181,7 +181,7 @@ class StationDetails extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  "200 kW",
+                                  "80 kW",
                                   style:TextStyle(fontFamily: 'FontMain',color: context.theme.focusColor,fontSize: 18),
                                 ),
                                 Text(
@@ -203,7 +203,7 @@ class StationDetails extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Text(
-                                  "8 RS",
+                                  "5 RS",
                                   style:TextStyle(fontFamily: 'FontMain',color: context.theme.focusColor,fontSize: 18),
                                 ),
                                 Text(

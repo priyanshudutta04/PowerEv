@@ -6,6 +6,7 @@ import 'package:power_ev/pages/check_availability.dart';
 import 'package:power_ev/pages/choose_charger.dart';
 import 'package:power_ev/pages/get_started.dart';
 import 'package:power_ev/pages/home.dart';
+import 'package:power_ev/pages/payment.dart';
 import 'package:power_ev/pages/station_details.dart';
 import 'package:power_ev/utils/routes.dart';
 import 'package:power_ev/utils/themes.dart';
@@ -66,6 +67,7 @@ class _MyAppState extends State<MyApp> {
         Myroutes.homeRoute: (context) => HomePage(),
         Myroutes.stationDetailsRoute: (context) => StationDetails(),
         Myroutes.availabilityRoute: (context) => CheckAvailability(),
+        Myroutes.paymentRoute: (context) => PaymentPage(),
       },
     );   
   }

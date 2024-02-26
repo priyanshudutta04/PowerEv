@@ -17,6 +17,7 @@ class _CheckAvailabilityState extends State<CheckAvailability> {
 
   void _selectStartTime() async {
     TimeOfDay? selectedTime = await showTimePicker(
+      initialEntryMode: TimePickerEntryMode.input,
       context: context,
       initialTime: TimeOfDay.now(),
     );
@@ -30,6 +31,7 @@ class _CheckAvailabilityState extends State<CheckAvailability> {
 
   void _selectEndTime() async {
     TimeOfDay? selectedTime = await showTimePicker(
+      initialEntryMode: TimePickerEntryMode.input,
       context: context,
       initialTime: TimeOfDay.now(),
     );
@@ -49,23 +51,6 @@ class _CheckAvailabilityState extends State<CheckAvailability> {
 
       difference = endMinutes - startMinutes;
 
-      // showDialog(
-      //   context: context,
-      //   builder: (BuildContext context) {
-      //     return AlertDialog(
-      //       title: Text('Time Difference'),
-      //       content: Text('The difference is $difference minutes.'),
-      //       actions: [
-      //         TextButton(
-      //           onPressed: () {
-      //             Navigator.of(context).pop();
-      //           },
-      //           child: Text('OK'),
-      //         ),
-      //       ],
-      //     );
-      //   },
-      // );
     }
   }
 
@@ -73,7 +58,7 @@ class _CheckAvailabilityState extends State<CheckAvailability> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: context.canvasColor,
-            body: SafeArea(
+        body: SafeArea(
         
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -189,9 +174,10 @@ class _CheckAvailabilityState extends State<CheckAvailability> {
 
               difference<1? Container()
               :GestureDetector(
-                // onTap: () => {
-                //       Navigator.pushNamed(context, '/getStarted')
-                //   },
+                onTap: () => {
+                      Navigator.pushNamed(context, '/payment',arguments: difference,)
+                      
+                  },
                 child: Padding(
                   padding: const EdgeInsets.only(left: 20, right: 30, top: 10,bottom: 10),
                   child: Align(
