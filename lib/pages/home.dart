@@ -119,31 +119,36 @@ class _HomePageState extends State<HomePage> {
                       
                       child:Column(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20,right: 20,top:10),
-                            child: ClipRRect(
-                                borderRadius: BorderRadius.circular(25),
-                                child: Container(
-                                  height: 160,
-                                  width: double.infinity,
-                                  decoration: BoxDecoration(
-                                    gradient: LinearGradient(
-                                      begin: Alignment.topLeft,
-                                      end: Alignment.bottomRight,
-                                      colors: [Colors.white60,Colors.white10]
+                          GestureDetector(
+                            onTap:  () => {
+                                Navigator.pushNamed(context, '/stationDetails')
+                            },
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 20,right: 20,top:10),
+                              child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(25),
+                                  child: Container(
+                                    height: 150,
+                                    width: double.infinity,
+                                    decoration: BoxDecoration(
+                                      gradient: LinearGradient(
+                                        begin: Alignment.topLeft,
+                                        end: Alignment.bottomRight,
+                                        colors: [Colors.white60,Colors.white10]
+                                      ),
+                                      borderRadius: BorderRadius.circular(25),
+                                      // border: Border.all(width: 2,color: Colors.white30),
                                     ),
-                                    borderRadius: BorderRadius.circular(25),
-                                    // border: Border.all(width: 2,color: Colors.white30),
-                                  ),
-                                  child: city=="Loading..."? PulsatingGradientContainer():
-
-                                  ChargerCard(
-                                    name: "EVCS Charging Station",
-                                    image: "assets/images/station-1.jpg",
-                                    address: "Action Area I, Newtown, Kolkata",
-                                    ports: "10 ports available",
-                                  ),
-                                ),           
+                                    child: city=="Loading..."? PulsatingGradientContainer():
+                            
+                                    ChargerCard(
+                                      name: "EVCS Charging Station",
+                                      image: "assets/images/station-1.jpg",
+                                      address: "Action Area I, Newtown, Kolkata",
+                                      ports: "10 ports available",
+                                    ),
+                                  ),           
+                              ),
                             ),
                           ),
 
@@ -152,7 +157,7 @@ class _HomePageState extends State<HomePage> {
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(25),
                                 child: Container(
-                                  height: 160,
+                                  height: 150,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
@@ -166,7 +171,7 @@ class _HomePageState extends State<HomePage> {
                                   child: city=="Loading..."? PulsatingGradientContainer():
                                   ChargerCard(
                                     name: "NKDA Charging Station",
-                                    image: "assets/images/station-1.jpg",
+                                    image: "assets/images/station-2.jpg",
                                     address: "AE Block, New Town, Kolkata",
                                     ports: "4 ports available",
                                   ),
@@ -179,7 +184,7 @@ class _HomePageState extends State<HomePage> {
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(25),
                                 child: Container(
-                                  height: 160,
+                                  height: 150,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
@@ -193,7 +198,7 @@ class _HomePageState extends State<HomePage> {
                                   child: city=="Loading..."? PulsatingGradientContainer(): 
                                   ChargerCard(
                                     name: "Tellus power green",
-                                    image: "assets/images/station-1.jpg",
+                                    image: "assets/images/station-3.jpg",
                                     address: "Sector II, Bidhannagar, Kolkata",
                                     ports: "6 ports available",
                                   ),
@@ -206,7 +211,7 @@ class _HomePageState extends State<HomePage> {
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(25),
                                 child: Container(
-                                  height: 160,
+                                  height: 150,
                                   width: double.infinity,
                                   decoration: BoxDecoration(
                                     gradient: LinearGradient(
@@ -220,7 +225,7 @@ class _HomePageState extends State<HomePage> {
                                   child: city=="Loading..."? PulsatingGradientContainer():
                                   ChargerCard(
                                     name: "EV City India",
-                                    image: "assets/images/station-1.jpg",
+                                    image: "assets/images/station-4.jpg",
                                     address: "AB Block, Sector 1, Bidhannagar, Kolkaata",
                                     ports: "5 ports available",
                                   ),

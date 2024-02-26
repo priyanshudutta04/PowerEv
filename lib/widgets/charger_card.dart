@@ -57,8 +57,11 @@ class ChargerCard extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(height: 5), 
-                      Text(ports,style: TextStyle(fontFamily: 'FontMain',color: context.theme.cardColor,fontSize: 12),),  
+                      SizedBox(height: 8), 
+                      Padding(
+                        padding: const EdgeInsets.only(left: 5),
+                        child: Text(ports,style: TextStyle(fontFamily: 'FontMain',color: context.theme.cardColor,fontSize: 12),),
+                      ),  
                     ],
                   ),
                 ),

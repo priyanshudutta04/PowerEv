@@ -2,4 +2,5 @@ class Myroutes{
   static String getStartedRoute = "/getStarted";
   static String chargerRoute = "/charger";
   static String homeRoute = "/home";
+  static String stationDetailsRoute = "/stationDetails";
 }
