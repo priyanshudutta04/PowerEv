@@ -69,7 +69,7 @@ class GetStarted extends StatelessWidget {
                     color: Colors.transparent
                   ),
                   child: Text(
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+                    "Power Ev offers remotely reserving a charging slot for your EV in advance, or start a new charging session by scanning the QR code on the connector via our app. EV users will be able to plan their outstation trips in advance without worrying about their EV charging needs. Our app maps the nearest charging stations using AI and books the charging slots automatically by estimating the distance the EV can travel on single charge.",
                     style: TextStyle(
                       fontSize: 14, 
                       color: Color.fromARGB(255, 214, 204, 204),
