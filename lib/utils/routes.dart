@@ -5,4 +5,5 @@ class Myroutes{
   static String stationDetailsRoute = "/stationDetails";
   static String availabilityRoute = "/availability";
   static String paymentRoute = "/payment";
+  static String paymentDoneRoute = "/paymentDone";
 }

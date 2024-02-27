@@ -44,7 +44,7 @@ class _PaymentPageState extends State<PaymentPage> {
               child: Container(
                 padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 30),
                 // ignore: sort_child_properties_last
-                height: 400,
+                height: 430,
                 width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -71,66 +71,74 @@ class _PaymentPageState extends State<PaymentPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Base Cost",style: TextStyle(color: context.theme.focusColor,fontSize: 18),),
-                          Text("₹$price",style: TextStyle(color: context.theme.focusColor,fontSize: 18),),
+                          Text("Base Cost",style: TextStyle(color: context.theme.focusColor,fontSize: 16,fontFamily: 'FontMain'),),
+                          Text("₹$price",style: TextStyle(color: context.theme.focusColor,fontSize: 16,fontFamily: 'FontMain'),),
                         ],
                       ),
+                      const SizedBox(height: 5,),
                       Divider(
                           color: context.cardColor,
                           thickness: 1.0,
                           indent: 0.0,
                           endIndent: 0.0,
                       ),
+                      const SizedBox(height: 5,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Discounts",style: TextStyle(color: context.theme.focusColor,fontSize: 18),),
-                          Text("-₹0.0",style: TextStyle(color: context.theme.focusColor,fontSize: 18),),
+                          Text("Discounts",style: TextStyle(color: context.theme.focusColor,fontSize: 16,fontFamily: 'FontMain'),),
+                          Text("-₹0.0",style: TextStyle(color: context.theme.focusColor,fontSize: 16,fontFamily: 'FontMain'),),
                         ],
                       ),
+                      const SizedBox(height: 5,),
                       Divider(
                           color: context.cardColor,
                           thickness: 1.0,
                           indent: 0.0,
                           endIndent: 0.0,
                       ),
+                      const SizedBox(height: 5,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Convenience Fees",style: TextStyle(color: context.theme.focusColor,fontSize: 18),),
-                          Text("₹20",style: TextStyle(color: context.theme.focusColor,fontSize: 18),),
+                          Text("Convenience Fees",style: TextStyle(color: context.theme.focusColor,fontSize: 16,fontFamily: 'FontMain'),),
+                          Text("₹20",style: TextStyle(color: context.theme.focusColor,fontSize: 16,fontFamily: 'FontMain'),),
                         ],
                       ),
+                      const SizedBox(height: 5,),
                       Divider(
                           color: context.cardColor,
                           thickness: 1.0,
                           indent: 0.0,
                           endIndent: 0.0,
                       ),
+                      const SizedBox(height: 5,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Service Charges",style: TextStyle(color: context.theme.focusColor,fontSize: 18),),
-                          Text("₹5",style: TextStyle(color: context.theme.focusColor,fontSize: 18),),
+                          Text("Service Charges",style: TextStyle(color: context.theme.focusColor,fontSize: 16,fontFamily: 'FontMain'),),
+                          Text("₹5",style: TextStyle(color: context.theme.focusColor,fontSize: 16,fontFamily: 'FontMain'),),
                         ],
                       ),
+                      const SizedBox(height: 5,),
                       Divider(
                           color: context.cardColor,
                           thickness: 1.0,
                           indent: 0.0,
                           endIndent: 0.0,
                       ),
+                      const SizedBox(height: 5,),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Total Cost",style: TextStyle(color: context.theme.focusColor,fontSize: 22),),
-                          Text("₹$totalPrice",style: TextStyle(color: context.theme.focusColor,fontSize: 22),),
+                          Text("Total Cost",style: TextStyle(color: context.theme.focusColor,fontSize: 20,fontFamily: 'FontMain'),),
+                          Text("₹$totalPrice",style: TextStyle(color: context.theme.focusColor,fontSize: 20,fontFamily: 'FontMain'),),
                         ],
                       ),
                       GestureDetector(
-                        // onTap: () => {
-                        //       Navigator.pushNamed(context, '/payment')
-                        //   },
+                        onTap: () => {
+                              Navigator.pushNamed(context, '/paymentDone')
+                          },
                         child: Padding(
                           padding: const EdgeInsets.only(left: 0, right: 0, top: 40,bottom: 10),
                           child: Align(
