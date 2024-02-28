@@ -1,4 +1,4 @@
-# power_ev
+# Power EV
 
 A new Flutter project.
 
