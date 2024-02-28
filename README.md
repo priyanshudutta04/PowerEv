@@ -1,16 +1,3 @@
 # Power EV
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Power Ev offers remotely reserving a charging slot for your EV in advance, or start a new charging session by scanning the QR code on the connector via our app. EV users will be able to plan their outstation trips in advance without worrying about their EV charging needs. Our app maps the nearest charging stations using AI and books the charging slots automatically by estimating the distance the EV can travel on single charge.
