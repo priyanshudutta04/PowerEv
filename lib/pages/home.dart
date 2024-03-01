@@ -4,7 +4,7 @@ import 'package:geolocator/geolocator.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:power_ev/widgets/charger_card.dart';
 import 'package:power_ev/widgets/pulsating_gradient.dart';
-import 'package:shimmer/shimmer.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 
