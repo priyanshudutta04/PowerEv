@@ -1,16 +1,31 @@
-# power_ev
+# Power EV
 
-A new Flutter project.
+An application to remotely book slots for EV charging staton. UI Showcase
 
-## Getting Started
+[![made-with-flutter](https://img.shields.io/badge/Made%20with-Flutter-1f425f.svg)](https://flutter.dev/)
 
-This project is a starting point for a Flutter application.
+<br/>
+<p align="center"><img src="https://github.com/priyanshudutta04/priyanshudutta04/blob/main/git%20images/imgonline-com-ua-twotoone-SYpM4pLcx4.png?raw=true" width="100%"></p>
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Building from Source
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. If you don't have Flutter SDK installed, please visit official [Flutter](https://flutter.dev/) site.
+2. Fetch latest source code from master branch.
+
+```
+git clone https://github.com/priyanshudutta04/PowerEv.git
+```
+
+3. Run the app with Android Studio or VS Code. Or the command line:
+
+```
+flutter pub get
+flutter run
+```
+
+## Contributing 🤝
+
+Contributions are always welcome. Feel free to make a pull request. Thanks to all the future contributors!
+
+Highly appreciate leaving a :star: if you liked it!
