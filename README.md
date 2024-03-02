@@ -28,4 +28,4 @@ flutter run
 
 Contributions are always welcome. Feel free to make a pull request. Thanks to all the future contributors!
 
-Highly appreciate leaving a :star: if you liked it!
+If you like this project, give it a ⭐ and share it with your friends!<br><br>
